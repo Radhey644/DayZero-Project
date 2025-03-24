@@ -7,9 +7,15 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 }
-/* img {
-  filter: brightness(2) contrast(1.2);
-} */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
 
 /* Add custom background overlay for hero section */
 .bg-hero-overlay {

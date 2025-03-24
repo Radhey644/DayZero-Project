@@ -141,60 +141,45 @@ function App() {
       {/* Hero Section */}
       {/* Hero Section */}
       <section className="relative min-h-screen px-4 md:px-6 bg-[url('/images/Hero-image.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="max-w-7xl mx-auto sm:pt-48 pt-32 relative">
-          <h1 className="text-4xl sm:text-[86px] leading-[1.1] font-bold text-white mb-6">
-            AI Employees,
-            <br />
-            Real Results
-          </h1>
-          <p className="text-lg sm:text-xl text-white/90 mb-8">
-            For Marketing, Product & Business Operation teams
-          </p>
-          <button className="bg-white text-black px-6 py-3 rounded-full text-sm font-medium">
-            Talk to us
-          </button>
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div className="max-w-7xl mx-auto sm:pt-48 pt-32 relative">
+    <h1 className="text-4xl sm:text-[86px] leading-[1.1] font-bold text-white mb-6">
+      AI Employees,
+      <br />
+      Real Results
+    </h1>
+    <p className="text-lg sm:text-xl text-white/90 mb-8">
+      For Marketing, Product & Business Operation teams
+    </p>
+    <button className="bg-white text-black px-6 py-3 rounded-full text-sm font-medium">
+      Talk to us
+    </button>
 
-          {/* Partner Logos */}
-          <div className="mt-20 sm:mt-32 flex flex-wrap justify-center sm:justify-between items-center gap-6 sm:gap-12">
-            <img
-              src="/images/Schbang.png"
-              alt="Schbang"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-            <img
-              src="/images/lenskart.png"
-              alt="Lenskart"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-            <img
-              src="/images/accenture.png"
-              alt="Accenture"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-            <img
-              src="/images/emblem.png"
-              alt="Emblem"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-            <img
-              src="/images/microsoft.png"
-              alt="Microsoft"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-            <img
-              src="/images/HardwardBusiness.png"
-              alt="HardwardBusiness"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-            <img
-              src="/images/Paytm.png"
-              alt="Paytm"
-              className="h-10 sm:h-12 brightness-200 opacity-100"
-            />
-          </div>
-        </div>
-      </section>
+    {/* Scrolling Partner Logos */}
+    <div className="mt-20 sm:mt-32 overflow-hidden whitespace-nowrap relative">
+      <div className="flex space-x-10 sm:space-x-12 animate-marquee">
+        <img src="/images/Schbang.png" alt="Schbang" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/lenskart.png" alt="Lenskart" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/accenture.png" alt="Accenture" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/emblem.png" alt="Emblem" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/microsoft.png" alt="Microsoft" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/HardwardBusiness.png" alt="Harvard Business" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/Paytm.png" alt="Paytm" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        {/* Duplicate for smooth infinite scrolling */}
+        <img src="/images/Schbang.png" alt="Schbang" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/lenskart.png" alt="Lenskart" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/accenture.png" alt="Accenture" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/emblem.png" alt="Emblem" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/microsoft.png" alt="Microsoft" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/HardwardBusiness.png" alt="Harvard Business" className="h-10 sm:h-12 brightness-200 opacity-100" />
+        <img src="/images/Paytm.png" alt="Paytm" className="h-10 sm:h-12 brightness-200 opacity-100" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       {/* AI Employees Section */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
