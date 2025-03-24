@@ -44,84 +44,100 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 px-6 py-3 bg-transparent">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-black/20 backdrop-blur-md rounded-full px-6 py-3 flex justify-between items-center">
-          {/* Logo */}
-          <div className="text-2xl font-medium text-white">dayzero</div>
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-black/20 backdrop-blur-md rounded-full px-6 py-3 flex items-center justify-between">
+      {/* Logo */}
+      <div className="text-2xl font-medium text-white">dayzero</div>
 
-          {/* Hamburger Icon (Mobile) */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+      {/* Hamburger Icon (Mobile) */}
+      <button
+        className="md:hidden text-white"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
 
-          {/* Navigation Links */}
-          <div
-            className={`absolute top-14 right-6 w-full mx-auto bg-black/90 rounded-lg p-4 flex flex-col gap-4 transition-all duration-300 md:static md:w-auto md:bg-transparent md:p-0 md:flex md:flex-row md:gap-10 md:items-center ${
-              isOpen ? "block" : "hidden"
-            }`}
-          >
-            <div className="group relative">
-              <button className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors">
-                <span>Employees</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:rotate-180"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M6 9l6 6 6-6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div className="group relative">
-              <button className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors">
-                <span>Products</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:rotate-180"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M6 9l6 6 6-6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <a
-              href="#"
-              className="text-white/90 hover:text-white transition-colors"
-            >
-              AI For Good
-            </a>
-            <a
-              href="#"
-              className="text-white/90 hover:text-white transition-colors"
-            >
-              About
-            </a>
-
-            {/* Talk to us button */}
-            <button className="bg-white hover:bg-gray-100 transition-colors text-black px-5 py-2 rounded-xl text-sm font-medium">
-              Talk to us
+      {/* Navigation Links (Centered on larger screens) */}
+      <div className="flex-1 hidden md:flex justify-center">
+        <div className="flex items-center gap-10">
+          <div className="group relative">
+            <button className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors">
+              <span>Employees</span>
+              <svg
+                className="w-4 h-4 transition-transform group-hover:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </button>
           </div>
+
+          <div className="group relative">
+            <button className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors">
+              <span>Products</span>
+              <svg
+                className="w-4 h-4 transition-transform group-hover:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <a href="#" className="text-white/90 hover:text-white transition-colors">
+            AI For Good
+          </a>
+          <a href="#" className="text-white/90 hover:text-white transition-colors">
+            About
+          </a>
         </div>
       </div>
-    </nav>
+
+      {/* Talk to us button (Right Side) */}
+      <div className="hidden md:block">
+        <button className="bg-white hover:bg-gray-100 transition-colors text-black px-5 py-2 rounded-xl text-sm font-medium">
+          Talk to us
+        </button>
+      </div>
+    </div>
+
+    {/* Mobile Menu (Appears when isOpen is true) */}
+    {isOpen && (
+      <div className="absolute top-14 left-0 w-full bg-black/90 p-4 flex flex-col gap-4 md:hidden">
+        <a href="#" className="text-white/90 hover:text-white transition-colors">
+          Employees
+        </a>
+        <a href="#" className="text-white/90 hover:text-white transition-colors">
+          Products
+        </a>
+        <a href="#" className="text-white/90 hover:text-white transition-colors">
+          AI For Good
+        </a>
+        <a href="#" className="text-white/90 hover:text-white transition-colors">
+          About
+        </a>
+        <button className="bg-white hover:bg-gray-100 transition-colors text-black px-5 py-2 rounded-xl text-sm font-medium">
+          Talk to us
+        </button>
+      </div>
+    )}
+  </div>
+</nav>
+
       {/* Hero Section */}
       {/* Hero Section */}
       <section className="relative min-h-screen px-4 md:px-6 bg-[url('/images/Hero-image.png')] bg-cover bg-center">
